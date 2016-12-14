@@ -4,15 +4,15 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<META NAME="Author" CONTENT="shayan-negar">
-		<META NAME="creator" CONTENT="negar-shayan">
-			<meta name="description" content="فروشگاه اینترنتی لپتاپ و کتاپ">
-			<meta name="application-name" content="باراد">
+	<META NAME="Author" CONTENT="elmira-pooneh-sima">
+		<META NAME="creator" CONTENT="elmira-pooneh-sima">
+			<meta name="description" content="فروشگاه اینترنتی کتاب">
+			<meta name="application-name" content="کتاب یاب">
 			<meta name="theme-color" content="#ffffff">
 
-			<meta name="keywords" content="فروشگاه , لپ تاپ">
+			<meta name="keywords" content="فروشگاه ، کتاب">
 
-			<title>فروشگاه باراد | <?php echo $title; ?></title>
+			<title>کتاب یاب</title>
 			<script>
 			var site_place = 'user';
 			var site_dir = "rtl";
@@ -37,13 +37,11 @@
 
 			<!-- start our js -->
 			<script type="text/javascript" src="../assets/js/lang/fa.js"></script>
-			<!-- <script type="text/javascript" src="../assets/js/jquery.ham3dform.js"></script> -->
 			<script type="text/javascript" src="../assets/js/jquery.ham3dModalbox.js"></script>
 			<script type="text/javascript" src="../assets/js/sonic.js"></script>
 			<script type="text/javascript" src="../assets/js/main2.js"></script>
 			<script type="text/javascript" src="../assets/js/lib2.js"></script>
 			<script type="text/javascript" src="../assets/js/basket2.js"></script>
-			<!-- <script type="text/javascript" src="../assets/js/compare.js"></script> -->
 			<script type="text/javascript" src="../assets/js/scriptoffer.js"></script>
 			<!-- end our js -->
 
@@ -66,8 +64,8 @@
 							  <h4 class="modal-title" id="myModalLabel">پروفایل کاربری</h4>
 							</div>
 							<div class="modal-body">
-							  کاربرگرامی نگار٫
-							  با موفقیت ورود یافتید.
+							  شما با موفقیت وارد شدید
+							  
 							</div>
 							<div class="modal-footer">
 							  <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
@@ -83,8 +81,7 @@
 							  <h4 class="modal-title" id="myModalLabel">پروفایل کاربری</h4>
 							</div>
 							<div class="modal-body">
-							  کاربرگرامی نگار٫
-							  با موفقیت خروج یافتید
+							  شما با موفقیت خارج شدید
 							</div>
 							<div class="modal-footer">
 							  <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
@@ -107,10 +104,10 @@
 								<a href="index.html" >صفحه اصلی</a>
 							  </li>
 							  <li>
-								<a href="index.html" >تماس با ما</a>
+								<a href="about.html" >تماس با ما</a>
 							  </li>
 							  <li>
-								<a href="pages/about.html" >درباره ما</a>
+								<a href="about.html" >درباره ما</a>
 							  </li>
 							</ul>
 						  </div>
@@ -125,19 +122,18 @@
 						  <div class="fine">جمع کل خرید شما :<span class='amount' >۰</span><span>تومان</span>
 						  </div>
 						  <div class="ok">
-							<a title="تسویه حساب" href="pages/factor.html">تسویه حساب</a>
+							<a title="تسویه حساب" href="factor.html">تسویه حساب</a>
 						  </div>
 						</div>
 					  </div>
 					</div>
 					<div class="two">
 					  <div class="logo">
-						<h1><a href="index.html">باراد</a></h1>
+						<h1><a href="index.html">کتاب یاب</a></h1>
 					  </div>
 					  <div class="search">
 						<form class="" id="formsearch" >
 						  <input type="text" placeholder="جستجو در کالاها ..." class="search_inp search_inp1" name="search" autocomplete="off" />
-						  <!-- <input type="submit" value="جستجو..." /> -->
 						  <a style="float: left;
 			width: 7%;
 			border:none;
@@ -146,7 +142,7 @@
 			border-radius: 3px 0 0 3px;
 			text-indent:-9999px;
 			background-repeat: no-repeat;
-			height: 30px;" href="pages/found.html" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+			height: 30px;" href="subjectsPage.html" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
 						</form>
 						<div id="ajax_result25"></div>
 					  </div>
@@ -159,7 +155,7 @@
 						$("#logout_success").modal('toggle');
 					  }
 					  function login(target) {
-						if($("#email").val() == 'negar@email.com'
+						if($("#email").val() == 'pooneh@email.com'
 						  && $("#password").val() == '123') {
 							login_show();
 							$(target).closest('.modal').modal('toggle');
@@ -169,7 +165,7 @@
 					  function login_show() {
 						html1 = '<a class="user-login" onclick="logout();"><i></i>خروج</a>';
 						$("#userOrLogOut").html(html1);
-						html2 = '<a href="pages/profile.html"><i></i>نگار بیاتی</a>';
+						html2 = '<a href="profile.html"><i></i>پونه مقیمی</a>';
 						$("#registerOrProfile").html(html2);
 					  }
 					  </script>
@@ -204,7 +200,7 @@
 						  <a onclick="login(this);" class="btn btn-danger" >ورود</a>
 						</div>
 						<div class="col-xs-12">
-						  <a href="pages/forgotpass.html">رمز عبور خود را فراموش کرده اید ؟</a>
+						  <a href="forgotpass.html">رمز عبور خود را فراموش کرده اید ؟</a>
 						</div>
 					  </div>
 					</form>
@@ -226,71 +222,43 @@
 					  <div class="collapse navbar-collapse js-navbar-collapse">
 						<ul class="nav navbar-nav" style="width:100%;">
 						  <li class="dropdown mega-dropdown first-menu">
-							<a href="pages/searchPro.html"  class="dropdown-toggle" data-toggle="dropdown">لپتاپ<span class="dp"></span></a>
+							<a href="#"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">موضوعات<span class="dp"></span></a>
 							<div class="dropdown-menu mega-dropdown-menu row">
 							  <ul>
 								<li class="col-xs-12 col-sm-4">
 								  <ul>
-									<li class="dropdown-header"><a href="index.html"  >بر اساس نوع</a></li>
-									<li><a href="pages/searchPro.html"  >نوت بوک (لپ تاپ)</a></li>
-									<li><a href="pages/searchPro.html"  >آلترا بوک</a></li>
-									<li><a href="pages/searchPro.html"  >نت بوک</a></li>
-									<li><a href="pages/searchPro.html"  >کروم بوک</a></li>
+									<br>
+									<li><a href="subjectsPage.html"  >ادبی و هنری</a></li>
+									<li><a href="subjectsPage.html"  >رمان</a></li>
+									<li><a href="subjectsPage.html"  >فنی و مهندسی</a></li>
+									<li><a href="subjectsPage.html"  >سیاسی و اجتماعی</a></li>
+									<li><a href="subjectsPage.html"  >کمک آموزشی</a></li>
 								  </ul>
 								</li>
 								<li class="col-xs-12 col-sm-4">
 								  <ul>
-									<li class="dropdown-header"><a href="index.html"  >براساس نوع کاربری</a></li>
-									<li><a href="pages/searchPro.html"  >عمومی و خانگی</a></li>
-									<li><a href="pages/searchPro.html"  >مخصوص بازی</a></li>
-									<li><a href="pages/searchPro.html"  >تبدیل پذیر</a></li>
-									<li><a href="pages/searchPro.html"  >با صفحه نمایش لمسی</a></li>
-									<li><a href="pages/searchPro.html"  >کاربری صنعتی</a></li>
+									<br>
+									<li><a href="subjectsPage.html"  >کودک</a></li>
+									<li><a href="subjectsPage.html"  >زبانهای خارجی</a></li>
+									<li><a href="subjectsPage.html"  >معارف</a></li>
+									<li><a href="subjectsPage.html"  >پزشکی</a></li>
+									<li><a href="subjectsPage.html"  >پیراپزشکی</a></li>
 								  </ul>
 								</li>
 							  </ul>
-							  <div class="img-menu" style="height: 335px;">
-								<div class="wall">
-								  <a href="pages/searchPro.html" target="_blank">
-									<img src="http://static.bamilo.com/p/asus-5161-4330111-1-product.jpg" alt="لپتاپ" title="لپتاپ" width="400" height="335" />
-								  </a>
-								</div>
-							  </div>
 							</div>
 						  </li>
-						  <li class="dropdown mega-dropdown first-menu">
-							<a href="pages/searchPro.html"  class="dropdown-toggle" data-toggle="dropdown">کتاب<span class="dp"></span></a>
-							<div class="dropdown-menu mega-dropdown-menu row">
-							  <ul>
-								<li class="col-xs-12 col-sm-4">
-								  <ul>
-									<li class="dropdown-header"><a href="index.html"  >بر اساس نوع</a></li>
-									<li><a href="pages/searchPro.html"  >رمان</a></li>
-									<li><a href="pages/searchPro.html"  >داستان کوتاه</a></li>
-									<li><a href="pages/searchPro.html"  >ماجرایی</a></li>
-									<li><a href="pages/searchPro.html"  >فکاهی</a></li>
-								  </ul>
-								</li>
-								<li class="col-xs-12 col-sm-4">
-								  <ul>
-									<li class="dropdown-header"><a href="index.html"  >براساس نوع مخاطب</a></li>
-									<li><a href="pages/searchPro.html"  >عمومی</a></li>
-									<li><a href="pages/searchPro.html"  >مخصوص کودک</a></li>
-									<li><a href="pages/searchPro.html"  >زنان</a></li>
-								  </ul>
-								</li>
-							  </ul>
-							  <div class="img-menu" style="height: 335px;">
-								<div class="wall">
-								  <a href="pages/searchPro.html" target="_blank">
-									<img src="http://www.ofoqco.com/images/books/344680.jpg" alt="کتاب" title="کتاب" width="400" height="335" />
-								  </a>
-								</div>
-							  </div>
-							</div>
+						  <li>
+							<a href="about.html">درباره ما</a>
+						  </li>
+						  <li>
+							<a href="#">راهنمای خرید</a>
+						  </li>
+						  <li>
+							<a href="about.html">تماس با ما</a>
 						  </li>
 						  <li style="float:left;">
-							<a class="btn-danger searchPro" style="color:white;" href="pages/searchPro.html">جستجوی پیشرفته محصولات</a>
+							<a class="btn-danger searchPro" style="color:white;" href="searchPro.html">جستجوی پیشرفته محصولات</a>
 						  </li>
 						</ul>
 					  </div>
@@ -646,10 +614,10 @@ $(function() {
 					<h4>با ما آشنا شوید</h4>
 					<ul class="mf">
 						<li>
-							<a href="pages/about.html">ارتباط با ما</a>
+							<a href="about.html">ارتباط با ما</a>
 						</li>
 						<li>
-							<a href="pages/about.html">درباره باراد</a>
+							<a href="about.html">درباره کتاب یاب</a>
 						</li>
 						<li>
 							<a href="">فرصت های شغلی</a>
@@ -677,15 +645,15 @@ $(function() {
 					<h4>حساب کاربری</h4>
 					<ul class="mf">
 						<li>
-							<a href="pages/register.html">ایجاد حساب کاربری جدید</a>
+							<a href="register.html">ایجاد حساب کاربری جدید</a>
 						</li>
 
 						<li>
-							<a href="index.html">ورود به سایت</a>
+							<a href="../index.html">ورود به سایت</a>
 						</li>
 
 						<li>
-							<a href="pages/factor.html">سبد خرید</a>
+							<a href="factor.html">سبد خرید</a>
 						</li>
 
 
@@ -703,7 +671,7 @@ $(function() {
 					</form>
 
 					<h1>
-						<a href="index.html">باراد</a>
+						<a href="index.html">کتاب یاب</a>
 					</h1>
 
 					<ul class="sn">
@@ -725,7 +693,7 @@ $(function() {
 
 				</div>
 				<div class="pull-left">
-					<strong>Shayan Yousefian And Negar Bayati</strong> - Copyright 2015 - All rights reserved
+					<strong>Pooneh Moghimi, Elmira Rakhshayi, Sima Bagheri</strong> - Copyright 2016 - All rights reserved
 				</div>
 			</div>
 		</div>
@@ -798,10 +766,6 @@ $('#popModal_ex1').click(function(){
 </script>
 <script type="text/javascript" src="../assets/js/dkslider.js"></script>
 <script type="text/javascript" src="../assets/js/dkscroller.js"></script>
-<!-- <script type="text/javascript" src="../assets/js/lib.js"></script> -->
-<!-- <script type="text/javascript" src="../assets/js/run.js"></script> -->
 <script type="text/javascript" src="../assets/js/main.js"></script>
 </body>
 </html>
-
-
