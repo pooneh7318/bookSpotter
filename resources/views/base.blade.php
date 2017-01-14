@@ -46,6 +46,10 @@
 
 			<script src="{{ URL::asset('js/plugin/raty/jquery.raty.js') }}"></script>
 			<script src="{{ URL::asset('js/plugin/raty/javascripts/labs.js') }}" type="text/javascript"></script>
+			<script>
+    var site_url = "{{ asset('/') }}";
+    getBasket();
+</script>
 			</head>
 
 			<body>

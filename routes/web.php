@@ -16,6 +16,10 @@ Route::get('/', function () {
 });
 
 Route::resource('book', 'BookController');
+Route::get('addBasket', 'BasketController@add');
+Route::get('getBasket', 'BasketController@get');
+Route::get('removeBasket', 'BasketController@remove');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
