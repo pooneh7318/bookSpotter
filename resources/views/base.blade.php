@@ -22,19 +22,18 @@
 			</script>
 
 			<!-- start template css -->
-			<link rel="stylesheet" type="text/css" href="{{ HTML::style('assets/css/cyber.css') }}" />
-			<link rel="stylesheet" type="text/css" href="../assets/css/cyber.css" />
-			<link rel="stylesheet" type="text/css" href="../assets/css/responsive.css" />
-			<link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
-			<link rel="stylesheet" type="text/css" href="../assets/css/owl.carousel.css" />
-			<link rel="stylesheet" type="text/css" href="../assets/css/owl.theme.css" />
-			<link rel="stylesheet" type="text/css" href="../assets/css/popModal.css">
-			<link rel="stylesheet" type="text/css" href="../assets/css/lightbox.css">
-			<link rel="stylesheet" type="text/css" href="../assets/css/style.css" />
-			<link rel="stylesheet" type="text/css" href="../assets/js/plugin/raty/jquery.raty.css" />
+			<link rel="stylesheet" type="text/css" href="<? php echo base_url();?>http://localhost/bookspotter/public/css/cyber.css" />
+			<link rel="stylesheet" type="text/css" href="<? php echo base_url();?>http://localhost/bookspotter/public/css/responsive.css" />
+			<link rel="assetsheet" type="text/css" href="<? php echo base_url();?>http://localhost/bookspotter/public/css/bootstrap.css" />
+			<link rel="assetsheet" type="text/css" href="<? php echo base_url();?>http://localhost/bookspotter/public/css/owl.carousel.css" />
+			<link rel="assetsheet" type="text/css" href="{{ URL::asset('css/owl.theme.css') }}" />
+			<link rel="assetsheet" type="text/css" href="{{ URL::asset('css/popModal.css') }}"/>
+			<link rel="assetsheet" type="text/css" href="{{ URL::asset('css/lightbox.css') }}"/>
+			<link rel="assetsheet" type="text/css" href="{{ URL::asset('css/style.css') }}" />
+			<link rel="assetsheet" type="text/css" href="{{ URL::asset('js/plugin/raty/jquery.raty.css') }}" />
 
-			<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
-			<script type="text/javascript" src="../assets/js/owl.carousel.min.js"></script>
+			<script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script>
+			<script type="text/javascript" src="{{ URL::asset('js/owl.carousel.min.js') }}"></script>
 
 			<!-- start our js -->
 			<script type="text/javascript" src="../assets/js/lang/fa.js"></script>

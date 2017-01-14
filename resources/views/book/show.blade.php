@@ -1,3 +1,4 @@
 @extends('base')
-
-helloo {{ $book->title }}
+@section('content')
+<p> hello </p>
+@stop
