@@ -22,31 +22,30 @@
 			</script>
 
 			<!-- start template css -->
-			<link rel="stylesheet" type="text/css" href="<? php echo base_url();?>http://localhost/bookspotter/public/css/cyber.css" />
-			<link rel="stylesheet" type="text/css" href="<? php echo base_url();?>http://localhost/bookspotter/public/css/responsive.css" />
-			<link rel="assetsheet" type="text/css" href="<? php echo base_url();?>http://localhost/bookspotter/public/css/bootstrap.css" />
-			<link rel="assetsheet" type="text/css" href="<? php echo base_url();?>http://localhost/bookspotter/public/css/owl.carousel.css" />
-			<link rel="assetsheet" type="text/css" href="{{ URL::asset('css/owl.theme.css') }}" />
-			<link rel="assetsheet" type="text/css" href="{{ URL::asset('css/popModal.css') }}"/>
-			<link rel="assetsheet" type="text/css" href="{{ URL::asset('css/lightbox.css') }}"/>
-			<link rel="assetsheet" type="text/css" href="{{ URL::asset('css/style.css') }}" />
-			<link rel="assetsheet" type="text/css" href="{{ URL::asset('js/plugin/raty/jquery.raty.css') }}" />
+			<link rel="stylesheet" type="text/css" href="http://localhost/bookspotter/public/css/cyber.css" />
+			<link rel="stylesheet" type="text/css" href="http://localhost/bookspotter/public/css/responsive.css" />
+			<link rel="stylesheet" type="text/css" href="http://localhost/bookspotter/public/css/bootstrap.css" />
+			<link rel="stylesheet" type="text/css" href="http://localhost/bookspotter/public/css/owl.carousel.css" />
+			<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/owl.theme.css') }}" />
+			<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/popModal.css') }}"/>
+			<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/lightbox.css') }}"/>
+			<link rel="stylesheet" type="text/css" href="{{ URL::asset('css/style.css') }}" />
+			<link rel="stylesheet" type="text/css" href="{{ URL::asset('js/plugin/raty/jquery.raty.css') }}" />
 
 			<script type="text/javascript" src="{{ URL::asset('js/jquery.min.js') }}"></script>
 			<script type="text/javascript" src="{{ URL::asset('js/owl.carousel.min.js') }}"></script>
 
 			<!-- start our js -->
-			<script type="text/javascript" src="../assets/js/lang/fa.js"></script>
-			<script type="text/javascript" src="../assets/js/jquery.ham3dModalbox.js"></script>
-			<script type="text/javascript" src="../assets/js/sonic.js"></script>
-			<script type="text/javascript" src="../assets/js/main2.js"></script>
-			<script type="text/javascript" src="../assets/js/lib2.js"></script>
-			<script type="text/javascript" src="../assets/js/basket2.js"></script>
-			<script type="text/javascript" src="../assets/js/scriptoffer.js"></script>
+			<script type="text/javascript" src="{{ URL::asset('js/lang/fa.js') }}"></script>
+			<script type="text/javascript" src="{{ URL::asset('js/sonic.js') }}"></script>
+			<script type="text/javascript" src="{{ URL::asset('js/main2.js') }}"></script>
+			<script type="text/javascript" src="{{ URL::asset('js/lib2.js') }}"></script>
+			<script type="text/javascript" src="{{ URL::asset('js/basket2.js') }}"></script>
+			<script type="text/javascript" src="{{ URL::asset('js/scriptoffer.js') }}"></script>
 			<!-- end our js -->
 
-			<script src="../assets/js/plugin/raty/jquery.raty.js"></script>
-			<script src="../assets/js/plugin/raty/javascripts/labs.js" type="text/javascript"></script>
+			<script src="{{ URL::asset('js/plugin/raty/jquery.raty.js') }}"></script>
+			<script src="{{ URL::asset('js/plugin/raty/javascripts/labs.js') }}" type="text/javascript"></script>
 			</head>
 
 			<body>
@@ -368,11 +367,11 @@
 
 <!------------------------------------------------------------------------------------------>
 
-<script type="text/javascript" src="../assets/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../assets/js/toggle.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.slimscroll.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.hoverIntent.min.js"></script>
-<script type="text/javascript" src="../assets/js/jquery.cyber.js"></script>
+<script type="text/javascript" src="{{ URL::asset('js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/toggle.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/jquery.slimscroll.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/jquery.hoverIntent.min.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/jquery.cyber.js') }}"></script>
 <script type="text/javascript">
 $(document).ready(function() {
 	$("#owl-demo-slider").owlCarousel({
@@ -407,7 +406,7 @@ $(document).ready(function() {
 	});
 });
 </script>
-<script type="text/javascript" src="../assets/js/popModal.js"></script>
+<script type="text/javascript" src="{{ URL::asset('js/popModal.js') }}"></script>
 <script type="text/javascript">
 $('#popModal_ex1').click(function(){
 	$('#popModal_ex1').popModal({
@@ -426,8 +425,8 @@ $('#popModal_ex1').click(function(){
 	});
 });
 </script>
-<script type="text/javascript" src="../assets/js/dkslider.js"></script>
-<script type="text/javascript" src="../assets/js/dkscroller.js"></script>
-<script type="text/javascript" src="../assets/js/main.js"></script>
+<script type="text/javascript" src="{{ URL::asset('js/dkslider.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/dkscroller.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('js/main.js') }}"></script>
 </body>
 </html>
