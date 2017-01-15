@@ -46,7 +46,6 @@
 
 			<script src="{{ URL::asset('js/plugin/raty/jquery.raty.js') }}"></script>
 			<script src="{{ URL::asset('js/plugin/raty/javascripts/labs.js') }}" type="text/javascript"></script>
-			<script src="{{ URL::asset('js/app.js') }}"></script>
 			<script>
     var site_url = "{{ asset('/') }}";
     getBasket();
@@ -95,18 +94,8 @@
 					  </div>
 
 					  <ul>
-						@if(Auth::check())
-                            <li id="userOrLogOut"><a href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                           
-                                        <i></i>خروج</a></li>
-										
-                            <li id="registerOrProfile"><a href="<?php  ?>pages/profile.php"><i></i>{{ Auth::user()->name }}</a></li>
-                        @else
-                            <li><a href="{{ URL::to('login') }}"><i></i>ورود اعضا</a></li>
-                            <li id="registerOrProfile"><a href="{{ URL::to('register') }}"><i></i>عضویت</a></li>
-                        @endif
+						<li id="userOrLogOut"><a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a></li>
+						<li id="registerOrProfile"><a href="register.html"><i></i>عضویت</a></li>
 
 						<li><a id="popModal_ex1" class="pm">سبد خرید<span class="shop_num">0</span></a></li>
 						<li>
@@ -162,33 +151,27 @@
 					  </div>
 					  <script>
 					  function logout() {
-                            $.ajax({
-                                url: '{{ asset('/logout') }}',
-                                type: "get",
-                                success: function (data) {
-                                    html1 = '<a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a>';
-                                    $("#userOrLogOut").html(html1);
-                                    html2 = '<a href="{{ asset('/register') }}"><i></i>عضویت</a>';
-                                    $("#registerOrProfile").html(html2);
-                                    $("#logout_success").modal('toggle');
-                                }
-                            });
-                        }
-                        function login(target) {
-                            if($("#email").val() == 'negar@email.com'
-                                    && $("#password").val() == '123') {
-                                login_show();
-                                $(target).closest('.modal').modal('toggle');
-                                $("#login_success").modal('toggle');
-                            }
-                        }
-                        function login_show() {
-                            html1 = '<a class="user-login" onclick="logout();"><i></i>خروج</a>';
-                            $("#userOrLogOut").html(html1);
-                            html2 = '<a href="<?php  ?>pages/profile.php"><i></i>نگار بیاتی</a>';
-                            $("#registerOrProfile").html(html2);
-                        }
-                    </script>
+						html1 = '<a class="user-login" data-toggle="modal" data-target=".bs-example-modal-sm"><i></i>ورود اعضا</a>';
+						$("#userOrLogOut").html(html1);
+						html2 = '<a href="register.html"><i></i>عضویت</a>';
+						$("#registerOrProfile").html(html2);
+						$("#logout_success").modal('toggle');
+					  }
+					  function login(target) {
+						if($("#email").val() == 'pooneh@email.com'
+						  && $("#password").val() == '123') {
+							login_show();
+							$(target).closest('.modal').modal('toggle');
+							$("#login_success").modal('toggle');
+						  }
+					  }
+					  function login_show() {
+						html1 = '<a class="user-login" onclick="logout();"><i></i>خروج</a>';
+						$("#userOrLogOut").html(html1);
+						html2 = '<a href="profile.html"><i></i>پونه مقیمی</a>';
+						$("#registerOrProfile").html(html2);
+					  }
+					  </script>
 					</div>
 				  </div>
 				</div>
@@ -288,9 +271,6 @@
 			  </div>
 			</header>
 			@yield('content')
-			<form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
 		<footer>
 	<div class="menu-footer">
 		<div class="container">

@@ -1,5 +1,4 @@
 @extends('base')
-
 @section('content')
 <section id="one">
 					<div class="container">
@@ -603,6 +602,4 @@
 		</div>
 	</div>
 </section>
-
-
-@endsection
+@stop

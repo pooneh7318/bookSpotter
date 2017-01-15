@@ -4,6 +4,11 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use App\Http\Requests\Request;
+use App\User;
+use Validator;
+
 
 class LoginController extends Controller
 {
