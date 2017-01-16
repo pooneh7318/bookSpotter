@@ -64,6 +64,13 @@
 
                     <div class="pd">
                         <h3>{{ $book->title }}
+						<small><?php
+                                $body = $book->description;
+                                if(strlen($body)>40)
+                                echo substr($body, 0, strpos($body, ' ', 40));
+                                else
+                                    echo $body;
+                                ?></small>
 						</h3>
                         <div class="border-four"></div>
 
@@ -73,14 +80,15 @@
 
                         <div class="col-xs-12 col-sm-6">
                             <div class="info">
-                                <div class="cod">کد محصول : <span class="product_info1_right_code">{{ $book->pid }}</span></div>
+                                <div class="cod">کد محصول : <span class="product_info1_right_code">100010011100204</span></div>
+
 
 
                                 <ul class="one">
                                     <li>
                                         <strong>وضعیت : </strong>
-                                         <span>{{ ($book->available)? 'موجود' : 'تمام شده' }}</span>
-                                        
+
+                                        <span>موجود</span>
 
                                     </li>
 
@@ -97,11 +105,11 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <!--li id="showgarantires"></li-->
+                                    <li id="showgarantires"></li>
                                 </ul>
                                 <ul class="two hideprice">
                                     <input type="hidden" id="getprice" name="getprice" value="487">
-                                            <li>قیمت برای شما : <span class="" id="">{{ $book->price }}</span></li>
+                                            <li>قیمت برای شما : <span class="" id="">3,500 تومان</span></li>
                                 </ul>
                                 <div class="add-shop">
                                     <a class="add-favorites poklick" data-toggle="modal" data-target=".bs-example-modal-sm" href="javascript:void(0);">
@@ -171,7 +179,7 @@
                                         نویسنده :
                                     </strong>
                                     <span>
-                                       {{ $writer->name }}
+                                        سيدعلي ميرفتاح
                                     </span>
                                 </li>
                                 <li>
@@ -180,7 +188,7 @@
                                     </strong>
                                     <span>
 
-                                       {{ $category->title }}
+                                        طنز
 
                                     </span>
                                 </li>
@@ -191,18 +199,27 @@
                                     </strong>
                                     <span>
 
-                                      {{ $book->year }}
+                                        1387
 
                                     </span>
                                 </li>
-                               
+                                <li>
+                                    <strong>
+                                        قطع :
+                                    </strong>
+                                    <span>
+
+                                      رقعی
+
+                                    </span>
+                                </li>
                                 <li>
                                     <strong>
                                       شماره شابک :
                                     </strong>
                                     <span>
 
-                                        {{ $book->SSID }}
+                                        ۷- ۳۶۵- ۳۶۹- ۹۶۴- ۹۷۸
 
                                     </span>
                                 </li>
@@ -212,7 +229,7 @@
                                     </strong>
                                     <span>
 
-                                      {{ $book->price }}
+                                      3,500 تومان
 
                                     </span>
                                 </li>
@@ -247,7 +264,7 @@
                         <h2>توضیحات</h2>
 												<span>
 
-													{{ $book->description }}
+													متن پشت جلد: دارم با صدای بلند فکر می کنم. فکر فکر فکر... دارم فکر می کنم انگار مهم است که پشت آن روبان طلایی زیبا و کاغذی  که نور روی آن بازتاب خیره کننده ای دارد.
 
 
 												</span>
@@ -322,7 +339,7 @@ var price = '3500';
             var book_id = $(".product_info1_right_code").text();
             addToBasket({
                 id: '{{ $book->id }}',
-                pid: '{{ $book->pid }}',
+                pid: book_id,
                 num: num,
                 img_url: img_url,
                 name: "{{ $book->title }}",

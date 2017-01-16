@@ -12,17 +12,28 @@
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('indexgood');
 });
 Route::get('login', function () {
     return view('login');
 });
-
+Route::post('bank', function () {
+    return view('bank');
+});
 Route::resource('book', 'BookController');
 
 Route::get('addBasket', 'BasketController@add');
 Route::get('getBasket', 'BasketController@get');
 Route::get('removeBasket', 'BasketController@remove');
+
+Route::get('factor', 'FactorController@index');
+Route::get('search', 'SearchController@index');
+Route::get('category/{id}', 'CategoryController@show');
+
+
+
+
+
 
 Route::get('logout', 'LoginController@getLogout');
 

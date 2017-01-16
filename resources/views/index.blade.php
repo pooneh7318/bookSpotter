@@ -1,7 +1,8 @@
 @extends('base')
 
 @section('content')
-<section id="one">
+
+				<section id="one">
 					<div class="container">
 						<div class="row">
 
@@ -14,7 +15,7 @@
 												<div class="item">
 													<a href="#">
 
-														<img src="assets/img/2.jpg" width="870" height="330" alt="متفاوت باشید و متفاوت بمانید " title="متفاوت باشید و متفاوت بمانید " />
+														<img src="{{ URL::asset('img/2.jpg') }}" width="870" height="330" alt="متفاوت باشید و متفاوت بمانید " title="متفاوت باشید و متفاوت بمانید " />
 
 													</a>
 												</div>
@@ -45,30 +46,24 @@
 										<div id="content" class="neg">
 											<article id="amazingoffer" class="dkbox mrg-bottom">
 												<div class="slides center">
-													<a  href="pages/book103.html" title="شازده کوچولو" class="slideItem">
-														<img class="incredible" src="assets/img/books/Shazde Kuchulu.jpg" width="607" height="300" alt="شازده کوچولو" title="شازده کوچولو" />
-												</a>
-												<a  href="pages/book100.html" title="قلندران پيژامه پوش" class="slideItem">
-													<img class="incredible" src="assets/img/books/ghalandaran.jpg" width="607" height="300" alt="قلندران پيژامه پوش" title="قلندران پيژامه پوش" />
-											</a>
-
-											<a  href="pages/book101.html" title="ناز و نياز " class="slideItem">
-												<img class="incredible" src="assets/img/books/naz-o-niaz.jpg" width="607" height="300" alt="ناز و نياز " title="ناز و نياز " />
-										</a>
-
-										<a  href="pages/book102.html" title="امپراتور کوتوله ی سرزمین لی لی پوت " class="slideItem">
-											<img class="incredible" src="assets/img/books/lilipoot.jpg" width="607" height="300" alt="امپراتور کوتوله ی سرزمین لی لی پوت " title="امپراتور کوتوله ی سرزمین لی لی پوت " />
-									</a>
+												 @foreach ($books['rand1'] as $book)
+                                            <a style="display: none;" href="{{ asset('/book')."/".$book->id}}" title="{{$book->title}}" class="slideItem">
+                                                <img class="incredible" src="{{ URL::asset($book->image) }}" width="607" height="300" alt="لنوو زد 5170 گرافیک 4 گیگابایت" title="لنوو زد 5170 گرافیک 4 گیگابایت" />
+                                            </a>
+                                        @endforeach
 
 
 								</div>
 
 								<div class="ff">
 									<ul class="tabs">
-										<li><a href="pages/book103.html" class="tabItem"><span>شازده کوچولو</span></a></li>
-										<li><a href="pages/book100.html" class="tabItem"><span>قلندران پيژامه پوش</span></a></li>
-										<li><a href="pages/book101.html" class="tabItem"><span>ناز و نياز </span></a></li>
-										<li><a href="pages/book102.html" class="tabItem"><span>امپراتور کوتوله ی سرزمین لی لی پوت </span></a></li>
+										 @foreach ($books['rand2'] as $book)
+                                                <li>
+                                                    <a href="{{ asset('/book')."/".$book->id}}" class="tabItem">
+                                                        <span>{{$book->title}}</span>
+                                                    </a>
+                                                </li>
+                                            @endforeach
 									</ul>
 								</div>
 							</article>
@@ -98,69 +93,23 @@
 							<div class="list">
 								<ul>
 
-									<li>
-										<div class="wall">
-											<a href="pages/book102.html">
-												<img src="assets/img/books/ghalandaran.jpg" width="80" height="80" alt="امپراتور کوتوله ی سرزمین لی لی پوت " title="امپراتور کوتوله ی سرزمین لی لی پوت " />
-											</a>
-										</div>
-										<div class="text">
-											<h3>
-												<a href="pages/book102.html">امپراتور کوتوله ی سرزمین لی لی پوت </a>
-											</h3>
-											<div class="row">
-											<div class="col-md-5">
-											<span class="price"><s>6,000 تومان</s></span>
-											</div>
-											</div>
-											<span class="discount"><b>5,000 تومان</b></span>
-											<span class="existent wew1">موجود</span>
-										</div>
-									</li>
-
-									<li>
-										<div class="wall">
-											<a href="book103.html">
-												<img src="assets/img/books/Shazde Kuchulu.jpg" width="80" height="80" alt="شازده کوچولو" title="شازده کوچولو" />
-											</a>
-										</div>
-										<div class="text">
-											<h3>
-												<a href="book103.html">شازده کوچولو</a>
-											</h3>
-											<div class="row">
-											<div class="col-md-6">
-											<span class="price"><s>10،000 تومان</s></span>
-											</div>
-											</div>
-											<span class="discount"><b>7,000 تومان</b></span>
-											<span class="existent wew1">موجود</span>
-										</div>
-									</li>
-
-									<li>
-										<div class="wall">
-											<a href="pages/book101.html">
-												<img src="assets/img/books/naz-o-niaz.jpg" width="80" height="80" alt="ناز و نياز " title="ناز و نياز " />
-											</a>
-										</div>
-										<div class="text">
-											<h3>
-												<a href="pages/book101.html">ناز و نياز </a>
-											</h3>
-											<br><br><br>
-											<div class="row">
-											<div class="col-md-6">
-											<span class="price">15،000 تومان</span>
-											</div>
-											<div class="col-md-6">
-											<span class="existent wew1">موجود</span>
-											</div>
-											</div>
-											<span class="discount"></span>
-											
-										</div>
-									</li>
+									@foreach ($books['rand3'] as $book)
+                                        <li>
+                                            <div class="wall">
+                                                <a href="{{ asset('/book')."/".$book->id}}">
+                                                    <img src="{{ URL::asset($book->image) }}" width="80" height="80" alt="امپراتور کوتوله ی سرزمین لی لی پوت " title="امپراتور کوتوله ی سرزمین لی لی پوت " />
+                                                </a>
+                                            </div>
+                                            <div class="text">
+                                                <h3>
+                                                    <a href="{{ asset('/book')."/".$book->id}}">&nbsp; {{$product->title}} </a>
+                                                </h3>
+                                                <span class="price"><span>{{$book->price}}</span> تومان</span>
+                                                <span class="rating score-callback" data-score="0"></span>
+                                                <span class="existent wew1">{{ ($book->available)? 'موجود' : 'تمام شده' }}</span>
+                                            </div>
+                                        </li>
+                                        @endforeach
 								</ul>
 							</div>
 						</div>
@@ -190,144 +139,29 @@
 							</div>
 							<div class="slider-product">
 								<div id="owl-demo2">
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book102.html">
-													<img src="assets/img/books/lilipoot.jpg" width="131" height="131" alt="امپراتور کوتوله ی سرزمین لی لی پوت " title="امپراتور کوتوله ی سرزمین لی لی پوت " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book102.html">امپراتور کوتوله ی سرزمین لی لی پوت </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-							
-												</ul>
-												<div class="price"><span><s>6,000</s></span> تومان &nbsp <span class="discount" style="color:black"><b>5,000 تومان</b></span> </div>
-											</div>
-										</div>
-									</div>
-
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/p506.html">
-													<img src="assets/img/books/Shazde Kuchulu.jpg" width="131" height="131" alt="شازده کوچولو" title="شازده کوچولو" />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book103.html">شازده کوچولو</a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-													
-												</ul>
-												<div class="price"><span><s>10,000</s></span> تومان &nbsp <span class="discount" style="color:black"><b>7,000 تومان</b></span> </div>
-											</div>
-										</div>
-									</div>
-
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book101.html">
-													<img src="assets/img/books/naz-o-niaz.jpg" width="131" height="131" alt="ناز و نياز " title="ناز و نياز " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book101.html">ناز و نياز </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-													
-												</ul>
-												<div class="price"><span>15،000</span> تومان</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book100.html">
-													<img src="assets/img/books/ghalandaran.jpg" width="131" height="131" alt=" قلندران پيژامه پوش " title=" قلندران پيژامه پوش " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book100.html"> قلندران پيژامه پوش </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-													
-												</ul>
-												<div class="price"><span>3,500</span> تومان</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book102.html">
-													<img src="assets/img/books/lilipoot.jpg" width="131" height="131" alt="امپراتور کوتوله ی سرزمین لی لی پوت " title="امپراتور کوتوله ی سرزمین لی لی پوت " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book102.html">امپراتور کوتوله ی سرزمین لی لی پوت </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-							
-												</ul>
-												<div class="price"><span><s>6,000</s></span> تومان &nbsp <span class="discount" style="color:black"><b>5,000 تومان</b></span> </div>
-											</div>
-										</div>
-									</div>
-
-									
-
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book101.html">
-													<img src="assets/img/books/naz-o-niaz.jpg" width="131" height="131" alt="ناز و نياز " title="ناز و نياز " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book101.html">ناز و نياز </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-													
-												</ul>
-												<div class="price"><span>15،000</span> تومان</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book100.html">
-													<img src="assets/img/books/ghalandaran.jpg" width="131" height="131" alt=" قلندران پيژامه پوش " title=" قلندران پيژامه پوش " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book100.html"> قلندران پيژامه پوش </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-													
-												</ul>
-												<div class="price"><span>3,500</span> تومان</div>
-											</div>
-										</div>
-									</div>
+									  @foreach ($books['latest'] as $book)
+                                            <div class="item">
+                                                <div class="product">
+                                                    <div class="wall">
+                                                        <a href="{{ asset('/book')."/".$book->id}}">
+                                                            <img src="{{ URL::asset($book->image) }}" width="131" height="131" alt="امپراتور کوتوله ی سرزمین لی لی پوت " title="امپراتور کوتوله ی سرزمین لی لی پوت " />
+                                                        </a>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>
+                                                            <a href="{{ asset('/book')."/".$book->id}}"> {{ $book->title }} </a>
+                                                        </h3>
+                                                        <ul>
+                                                            <li class="wew1">{{ ($book->available)? 'موجود' : 'تمام شده' }}</li>
+                                                            <li>
+                                                                <span class="rating score-callback" data-score="4"></span>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="price"><span>{{ $book->price }}</span> تومان</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
 								</div>
 							</div>
 						</div>
@@ -340,126 +174,29 @@
 							</div>
 							<div class="slider-product">
 								<div id="owl-demo3">
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book102.html">
-													<img src="assets/img/books/lilipoot.jpg" width="131" height="131" alt="امپراتور کوتوله ی سرزمین لی لی پوت " title="امپراتور کوتوله ی سرزمین لی لی پوت " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book102.html">امپراتور کوتوله ی سرزمین لی لی پوت </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-							
-												</ul>
-												<div class="price"><span><s>6,000</s></span> تومان &nbsp <span class="discount" style="color:black"><b>5,000 تومان</b></span> </div>
-											</div>
-										</div>
-									</div>
-
-									
-
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book101.html">
-													<img src="assets/img/books/naz-o-niaz.jpg" width="131" height="131" alt="ناز و نياز " title="ناز و نياز " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book101.html">ناز و نياز </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-													
-												</ul>
-												<div class="price"><span>15،000</span> تومان</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book100.html">
-													<img src="assets/img/books/ghalandaran.jpg" width="131" height="131" alt=" قلندران پيژامه پوش " title=" قلندران پيژامه پوش " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book100.html"> قلندران پيژامه پوش </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-													
-												</ul>
-												<div class="price"><span>3,500</span> تومان</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book102.html">
-													<img src="assets/img/books/lilipoot.jpg" width="131" height="131" alt="امپراتور کوتوله ی سرزمین لی لی پوت " title="امپراتور کوتوله ی سرزمین لی لی پوت " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book102.html">امپراتور کوتوله ی سرزمین لی لی پوت </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-							
-												</ul>
-												<div class="price"><span><s>6,000</s></span> تومان &nbsp <span class="discount" style="color:black"><b>5,000 تومان</b></span> </div>
-											</div>
-										</div>
-									</div>
-
-							
-
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book101.html">
-													<img src="assets/img/books/naz-o-niaz.jpg" width="131" height="131" alt="ناز و نياز " title="ناز و نياز " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book101.html">ناز و نياز </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-													
-												</ul>
-												<div class="price"><span>15،000</span> تومان</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book100.html">
-													<img src="assets/img/books/ghalandaran.jpg" width="131" height="131" alt=" قلندران پيژامه پوش " title=" قلندران پيژامه پوش " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book100.html"> قلندران پيژامه پوش </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-													
-												</ul>
-												<div class="price"><span>3,500</span> تومان</div>
-											</div>
-										</div>
-									</div>
+									   @foreach ($books['rand1'] as $book)
+                                            <div class="item">
+                                                <div class="product">
+                                                    <div class="wall">
+                                                        <a href="{{ asset('/book')."/".$book->id}}">
+                                                            <img src="{{ URL::asset($book->image) }}" width="131" height="131" alt="امپراتور کوتوله ی سرزمین لی لی پوت " title="امپراتور کوتوله ی سرزمین لی لی پوت " />
+                                                        </a>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>
+                                                            <a href="{{ asset('/book')."/".$book->id]}}"> {{ $book->id }} </a>
+                                                        </h3>
+                                                        <ul>
+                                                            <li class="wew1">{{ ($book->available)? 'موجود' : 'تمام شده' }}</li>
+                                                            <li>
+                                                                <span class="rating score-callback" data-score="4"></span>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="price"><span>{{ $book->price }}</span> تومان</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
 								</div>
 							</div>
 						</div>
@@ -472,125 +209,29 @@
 							</div>
 							<div class="slider-product">
 								<div id="owl-demo4">
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book102.html">
-													<img src="assets/img/books/lilipoot.jpg" width="131" height="131" alt="امپراتور کوتوله ی سرزمین لی لی پوت " title="امپراتور کوتوله ی سرزمین لی لی پوت " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book102.html">امپراتور کوتوله ی سرزمین لی لی پوت </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-							
-												</ul>
-												<div class="price"><span><s>6,000</s></span> تومان &nbsp <span class="discount" style="color:black"><b>5,000 تومان</b></span> </div>
-											</div>
-										</div>
-									</div>
-
-									
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book101.html">
-													<img src="assets/img/books/naz-o-niaz.jpg" width="131" height="131" alt="ناز و نياز " title="ناز و نياز " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book101.html">ناز و نياز </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-													
-												</ul>
-												<div class="price"><span>15،000</span> تومان</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book100.html">
-													<img src="assets/img/books/ghalandaran.jpg" width="131" height="131" alt=" قلندران پيژامه پوش " title=" قلندران پيژامه پوش " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book100.html"> قلندران پيژامه پوش </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-													
-												</ul>
-												<div class="price"><span>3,500</span> تومان</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book102.html">
-													<img src="assets/img/books/lilipoot.jpg" width="131" height="131" alt="امپراتور کوتوله ی سرزمین لی لی پوت " title="امپراتور کوتوله ی سرزمین لی لی پوت " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book102.html">امپراتور کوتوله ی سرزمین لی لی پوت </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-							
-												</ul>
-												<div class="price"><span><s>6,000</s></span> تومان &nbsp <span class="discount" style="color:black"><b>5,000 تومان</b></span> </div>
-											</div>
-										</div>
-									</div>
-
-									
-
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book101.html">
-													<img src="assets/img/books/naz-o-niaz.jpg" width="131" height="131" alt="ناز و نياز " title="ناز و نياز " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book101.html">ناز و نياز </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-													
-												</ul>
-												<div class="price"><span>15،000</span> تومان</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="product">
-											<div class="wall">
-												<a href="pages/book100.html">
-													<img src="assets/img/books/ghalandaran.jpg" width="131" height="131" alt=" قلندران پيژامه پوش " title=" قلندران پيژامه پوش " />
-												</a>
-											</div>
-											<div class="info">
-												<h3>
-													<a href="pages/book100.html"> قلندران پيژامه پوش </a>
-												</h3>
-												<ul>
-													<li class="wew1">موجود</li>
-													
-												</ul>
-												<div class="price"><span>3,500</span> تومان</div>
-											</div>
-										</div>
-									</div>
+									 @foreach ($books['rand2'] as $book)
+                                            <div class="item">
+                                                <div class="product">
+                                                    <div class="wall">
+                                                        <a href="{{ asset('/book')."/".$book->id}}">
+                                                            <img src="{{ URL::asset($book->image) }}" width="131" height="131" alt="امپراتور کوتوله ی سرزمین لی لی پوت " title="امپراتور کوتوله ی سرزمین لی لی پوت " />
+                                                        </a>
+                                                    </div>
+                                                    <div class="info">
+                                                        <h3>
+                                                            <a href="{{ asset('/book')."/".$book->id}}"> {{ $book->title }} </a>
+                                                        </h3>
+                                                        <ul>
+                                                            <li class="wew1">{{ ($book->available)? 'موجود' : 'تمام شده' }}</li>
+                                                            <li>
+                                                                <span class="rating score-callback" data-score="4"></span>
+                                                            </li>
+                                                        </ul>
+                                                        <div class="price"><span>{{ $book->price }}</span> تومان</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        @endforeach
 								</div>
 							</div>
 						</div>

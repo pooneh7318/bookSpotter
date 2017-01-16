@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
+use App\User;
+use App\Category;
 
 class BookController extends Controller
 {
@@ -47,7 +49,9 @@ class BookController extends Controller
     public function show($id)
     {
         $book = Book::find($id);
-		return view('book.show', array('book' => $book));
+		$writer = User::find($book->writer);
+		$category = Category::find($book->category);
+		return view('book.show', array('book' => $book, 'writer' => $writer, 'category' => $category));
     }
 
     /**

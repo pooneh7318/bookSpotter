@@ -76,7 +76,8 @@ class BasketController extends Controller
 			
 			if(Auth::check()) {
                 $user = Auth::user();
-                $profile = profile::where('id_user', '=', $user->id)->first();
+				$user = $user->toArray();
+                $profile = profile::where('id_user', '=', $user['id'])->first();
                 if($profile==null){
 					$profile = new profile;
 					$profile->id_user = $user->id;
@@ -100,7 +101,7 @@ class BasketController extends Controller
                 }
             }
             if($new)
-                $basket[] = $data;
+				$basket[] = $data;
             $basket = json_encode($basket);
             $profile->basket = $basket;
             $profile->save();

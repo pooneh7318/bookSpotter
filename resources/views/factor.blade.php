@@ -6,45 +6,38 @@
 		<div class="row">
 			<div class="col-xs-12">
 				<form class="form-horizontal">
+					<?php $num=0;?>
+					@foreach($basket as $key=>$item) 
 					<br>
 					<div class="row">
-						<div class="col-md-8">
-							<img src="../assets/img/books/ghalandaran.jpg" width="80" height="80" alt="" title="" />
+						<div class="col-md-5">
+							<img src="{{ $item['img_url'] }}" width="80" height="80" alt="" title="" />
 						</div>
-						<div class="col-md-4">
-							تعداد: 1
+					
+						<div class="col-md-7">
+						<span><b>{{ $item['name'] }}</b></span>
+						<br>
+						<span>تعداد:</span><span>{{ $item['num'] }}</span>
 							<br>
-							قیمت  10,000 تومان
+						<span>قیمت:</span><span>{{ $item['price'] }}</span> 
 							<br>
-							تخفیف 2,000 تومان
+						<span>تخفیف:</span><span>{{ $item['discount'] }}</span>
 
 						</div>
 					</div>
 					<hr style=" border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));">
-					<div class="row">
-						<div class="col-md-8">
-							<img src="../assets/img/books/naz-o-niaz.jpg" width="80" height="80" alt="" title="" />
-						</div>
-						<div class="col-md-4">
-							<br>
-							تعداد:  3
-							<br>
-							قیمت  21,000 تومان
-							<br>
-							تخفیف 3,000 تومان
+					<?php $num = $num + $item['num'];?>
+					@endforeach
+	
 
-						</div>
-					</div>
-					<hr style=" border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));">
+					
 
-					<div class="row">
+<div class="row">
 
 						<div class="col-md-8">
-							تعداد کل: 4
+							تعداد کل:{{ $num }} 
 							<br>
 							قیمت  31000 تومان
 							<br><br>
@@ -61,7 +54,7 @@
 					</div>
 
 
-		<!-- Modal -->
+		<!-- Modal 
 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 		  <div class="modal-dialog" role="document">
 		    <div class="modal-content">
@@ -84,15 +77,13 @@
 	    <div class="col-sm-offset-2 col-sm-10">
 
 	<!-- Button trigger modal -->
-	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-خرید
-	</button>
-	    </div>
-	  </div>
+	<form action="" method="POST" role="form" >
+		<input value="خرید" type="submit" />
 	</form>
-			</div>
-
-		</div>
+	</form>
 	</div>
+	</div>
+	</div>
+
 </section>
 @stop

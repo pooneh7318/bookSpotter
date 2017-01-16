@@ -136,14 +136,14 @@
 						  <div class="fine">جمع کل خرید شما :<span class='amount' >۰</span><span>تومان</span>
 						  </div>
 						  <div class="ok">
-							<a title="تسویه حساب" href="{{ URL::to('factor') }}">تسویه حساب</a>
+							<a title="تسویه حساب" href="factor.html">تسویه حساب</a>
 						  </div>
 						</div>
 					  </div>
 					</div>
 					<div class="two">
 					  <div class="logo">
-						<h1><a href="{{ URL::to('/') }}">کتاب یاب</a></h1>
+						<h1><a href="index.html">کتاب یاب</a></h1>
 					  </div>
 					  <div class="search">
 						<form class="" id="formsearch" >
@@ -156,7 +156,7 @@
 			border-radius: 3px 0 0 3px;
 			text-indent:-9999px;
 			background-repeat: no-repeat;
-			height: 30px;" href="{{ URL::to('search') }}" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
+			height: 30px;" href="subjectsPage.html" ><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a>
 						</form>
 						<div id="ajax_result25"></div>
 					  </div>
@@ -243,32 +243,30 @@
 						<ul class="nav navbar-nav" style="width:100%;">
 						  <li class="dropdown mega-dropdown first-menu">
 							<a href="#"  class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">موضوعات<span class="dp"></span></a>
-							<div class="dropdown-menu mega-dropdown-menu row" name="search">
+							<div class="dropdown-menu mega-dropdown-menu row">
 							  <ul>
 								<li class="col-xs-12 col-sm-4">
 								  <ul>
 									<br>
-									<li name="search"><a href="{{ URL::to('category/2') }}">ادبی و هنری</a></li>
-									<li name="search"><a href="{{ URL::to('category/3') }}">رمان</a></li>
-									<li><a href="{{ URL::to('category/4') }}">فنی و مهندسی</a></li>
-									<li><a href="{{ URL::to('category/5') }}">سیاسی و اجتماعی</a></li>
-									<li><a href="{{ URL::to('category/6') }}">کمک آموزشی</a></li>
+									<li><a href="subjectsPage.html"  >ادبی و هنری</a></li>
+									<li><a href="subjectsPage.html"  >رمان</a></li>
+									<li><a href="subjectsPage.html"  >فنی و مهندسی</a></li>
+									<li><a href="subjectsPage.html"  >سیاسی و اجتماعی</a></li>
+									<li><a href="subjectsPage.html"  >کمک آموزشی</a></li>
 								  </ul>
 								</li>
 								<li class="col-xs-12 col-sm-4">
 								  <ul>
 									<br>
-									<li><a href="{{ URL::to('category/1') }}">کودک</a></li>
-									<li><a href="{{ URL::to('category/7') }}">زبانهای خارجی</a></li>
-									<li><a href="{{ URL::to('category/8') }}">معارف</a></li>
-									<li><a href="{{ URL::to('category/9') }}">پزشکی</a></li>
-									<li><a href="{{ URL::to('category/10') }}">پیراپزشکی</a></li>
+									<li><a href="subjectsPage.html"  >کودک</a></li>
+									<li><a href="subjectsPage.html"  >زبانهای خارجی</a></li>
+									<li><a href="subjectsPage.html"  >معارف</a></li>
+									<li><a href="subjectsPage.html"  >پزشکی</a></li>
+									<li><a href="subjectsPage.html"  >پیراپزشکی</a></li>
 								  </ul>
 								</li>
 							  </ul>
 							</div>
-							
-							
 						  </li>
 						  <li>
 							<a href="about.html">درباره ما</a>
@@ -357,7 +355,9 @@
 						<input type="submit" value="ثبت" />
 					</form>
 
-					
+					<h1>
+						<a href="index.html">کتاب یاب</a>
+					</h1>
 
 					<ul class="sn">
 						<li>ما را دنبال کنيد</li>
